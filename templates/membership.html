@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입</title>
-    <link rel="stylesheet" href="/css/membership.css">
+    <link rel="stylesheet" href="/static/css/membership.css">
 </head>
 <body>
     <div class="container">
         <div class="signup-form">
             <h1>회원가입</h1>
             <p>저희의 하루님이 되어주세요!</p>
-            <form>
+            <form id="signupForm">
                 <div class="input-group">
-                    <input type="text" placeholder="이름">
-                    <input type="date" placeholder="생년월일">
+                    <input type="text" id="name" placeholder="이름" required>
+                    <input type="date" id="date" placeholder="생년월일" required>
                 </div>
-                <input type="email" placeholder="이메일">
+                <input type="email" id="email" placeholder="이메일" required>
                 <div class="password-group">
-                    <input type="password" placeholder="비밀번호">
+                    <input type="password" id="password" placeholder="비밀번호" required>
                     <button type="button" class="toggle-password">
                         <img src="/png/eye_icon.png" alt="눈">
                     </button>
@@ -34,5 +34,7 @@
             <p><a href="login.html">이미 계정이 있으신가요?</a></p>
         </div>
     </div>
+
+    <script src="/static/js/membership.js"></script>
 </body>
 </html>
